@@ -1,0 +1,466 @@
+/* الأجهزة الكبيرة (من 650px إلى 1024px) */
+@media screen and (min-width: 650px) and (max-width: 1024px) {
+  .mainBody {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    margin-top: 30px;
+  }
+
+  .wiog,
+  .waw {
+    padding: 15px;
+    width: 550px;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+  }
+
+  .card {
+    width: 260px;
+    height: 170px;
+  }
+  .OurProjPlace {
+    margin: 70px auto;
+    padding: 30px 20px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .OuProj {
+    font-size: 38px;
+    text-align: center;
+  }
+
+  .firstProject {
+    padding: 25px;
+    flex-direction: column; /* ترتيب عمودي لتجنب التكدس */
+    align-items: center;
+    gap: 25px;
+  }
+
+  .firstProject video {
+    width: 100%;
+    max-width: 400px; /* ضبط أقصى عرض للفيديو */
+    border-radius: 15px;
+  }
+
+  .firstProjectInfo {
+    flex: 1;
+    min-width: 100%;
+    text-align: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .infoRow {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .proTitle {
+    font-size: 28px;
+  }
+
+  .teamImg {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto;
+  }
+
+  .infoLabel {
+    font-size: 18px;
+  }
+
+  .infoValue {
+    font-size: 16px;
+  }
+
+  .proVideo {
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+  .htsu {
+    flex-direction: column;
+    padding: 40px 25px;
+    gap: 22px;
+  }
+
+  .htsuText {
+    font-size: 26px;
+  }
+
+  .finishWord {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .iconForFinish {
+    width: 42px;
+    height: 42px;
+  }
+}
+
+/* الأجهزة المتوسطة (من 500px إلى 650px) */
+@media screen and (min-width: 500px) and (max-width: 650px) {
+  .settings {
+    position: absolute;
+    top: 120px;
+    right: 15px;
+  }
+
+  .theSettings {
+    top: 30px;
+    right: 0px;
+    scale: 0.8 !important;
+  }
+
+  .mainBody {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    margin-top: 25px;
+  }
+
+  .wiog,
+  .waw {
+    padding: 15px;
+    width: 450px;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .card {
+    width: 240px;
+    height: 160px;
+  }
+  .OurProjPlace {
+    margin: 80px auto;
+    padding: 35px 25px;
+    gap: 45px;
+    min-height: auto;
+  }
+
+  .OuProj {
+    font-size: 36px;
+    margin-bottom: 25px;
+  }
+
+  .firstProject {
+    padding: 30px;
+    flex-direction: column; /* تبقى عمودية لتوفير مساحة */
+    gap: 30px;
+  }
+
+  .firstProject video {
+    width: 100%;
+    max-width: 400px; /* زيادة العرض الأقصى للفيديو */
+  }
+
+  .firstProjectInfo {
+    min-width: 100%;
+  }
+
+  .teamImg {
+    width: 130px;
+    height: 130px;
+  }
+
+  .proTitle {
+    font-size: 28px;
+  }
+
+  .infoLabel {
+    font-size: 19px;
+  }
+
+  .infoValue {
+    font-size: 17px;
+  }
+
+  .proVideo {
+    padding: 13px 25px;
+  }
+  .htsu {
+    padding: 35px 20px;
+    gap: 20px;
+  }
+
+  .htsuText {
+    font-size: 24px;
+  }
+
+  .finishWord {
+    font-size: 15px;
+  }
+  .iconForFinish {
+    width: 40px;
+    height: 40px;
+    padding: 7px;
+  }
+}
+
+/* الأجهزة الصغيرة (من 320px إلى 500px) */
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .hogfgLogo {
+    width: 140px;
+    height: 140px;
+  }
+
+  .hgf {
+    font-size: 34px;
+    letter-spacing: 1.2px;
+  }
+
+  .startWord {
+    font-size: 1.2rem;
+  }
+
+  .settings {
+    position: absolute;
+    top: 100px;
+    right: 15px;
+  }
+
+  .toggleBtn {
+    scale: 0.7 !important;
+    top: -65px;
+    right: -6px;
+  }
+
+  .theSettings {
+    top: -50px;
+    right: -26px;
+    scale: 0.6 !important;
+  }
+
+  .mainBody {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+  }
+
+  .wiog,
+  .waw {
+    padding: 10px;
+    width: 340px;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card {
+    width: 200px;
+    height: 140px;
+  }
+
+  .OurProjPlace {
+    margin: 70px auto;
+    padding: 30px 20px;
+    gap: 40px;
+    min-height: auto;
+  }
+
+  .OuProj {
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
+
+  .firstProject {
+    padding: 25px;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .firstProject video {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .firstProjectInfo {
+    min-width: 100%;
+  }
+
+  .teamImg {
+    width: 120px;
+    height: 120px;
+  }
+
+  .proTitle {
+    font-size: 26px;
+  }
+
+  .infoLabel {
+    font-size: 18px;
+  }
+
+  .infoValue {
+    font-size: 16px;
+  }
+
+  .proVideo {
+    padding: 12px 24px;
+    font-size: 15px;
+  }
+  .htsu {
+    padding: 30px 18px;
+    gap: 18px;
+  }
+
+  .htsuText {
+    font-size: 22px;
+  }
+
+  .finishWord {
+    font-size: 14px;
+  }
+
+  .iconForFinish {
+    width: 38px;
+    height: 38px;
+    padding: 6px;
+  }
+}
+
+/* الأجهزة الأصغر (320px إلى 400px) */
+@media screen and (min-width: 320px) and (max-width: 400px) {
+  .mainF1 {
+    min-height: 100vh;
+    height: 5300px;
+  }
+
+  .toggleBtn {
+    scale: 0.7 !important;
+    top: -28px;
+    right: -6px;
+  }
+
+  .theSettings {
+    top: -10px;
+    right: -42px;
+    scale: 0.5 !important;
+  }
+
+  .mainBody {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+  }
+
+  .wiog,
+  .waw {
+    padding: 12px;
+    width: 260px;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card {
+    width: 180px;
+    height: 120px;
+  }
+  .OurProjPlace {
+    margin: 50px auto; /* تقليل الهامش الرأسي */
+    padding: 20px 15px; /* تقليل الحشوة */
+    gap: 30px; /* تقليل الفراغ بين العناصر */
+    min-height: auto; /* السماح بتغير الارتفاع التلقائي */
+  }
+
+  /* تنسيقات العنوان الرئيسي */
+  .OuProj {
+    font-size: 28px; /* تصغير حجم الخط */
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+  }
+
+  /* تنسيقات بطاقة المشروع */
+  .firstProject {
+    padding: 20px;
+    flex-direction: column; /* ترتيب العناصر عمودياً */
+    gap: 20px;
+  }
+
+  /* تنسيقات الفيديو */
+  .firstProject video {
+    width: 100%; /* جعل العرض يملأ الحاوية */
+    max-width: 300px; /* تحديد عرض أقصى ليبقى متناسقًا */
+    border: 2px solid #1d75bc; /* تصغير سمك الحدود */
+  }
+
+  /* تنسيقات معلومات المشروع */
+  .firstProjectInfo {
+    min-width: 100%; /* جعل العرض يملأ الحاوية */
+  }
+
+  /* تنسيقات صورة الفريق/الشعار */
+  .teamImg {
+    width: 100px;
+    height: 100px;
+  }
+
+  /* تنسيقات عنوان المشروع */
+  .proTitle {
+    font-size: 22px;
+    margin-top: 10px;
+  }
+
+  /* تنسيقات التسمية والقيمة */
+  .infoLabel {
+    font-size: 16px;
+  }
+
+  .infoValue {
+    font-size: 14px;
+  }
+
+  /* تنسيقات الزر */
+  .proVideo {
+    padding: 10px 20px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+  .htsu {
+    padding: 25px 15px;
+    gap: 15px;
+  }
+
+  .htsuText {
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+
+  .finishWord {
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  .iconForFinish {
+    width: 35px;
+    height: 35px;
+    padding: 6px;
+  }
+}

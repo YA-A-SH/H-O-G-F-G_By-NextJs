@@ -1,0 +1,133 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+  transition: 0.5s ease-in-out;
+  user-select: none;
+}
+
+/*==================================================*/
+/*================ The MODE Setting ================*/
+/*==================================================*/
+
+.light,
+.dark {
+  height: 99%;
+  width: 99%;
+  border-radius: 10px;
+  margin-top: 5px;
+  padding: 20px;
+}
+
+/* Light Mode */
+.light {
+  background-color: #ffffff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  border: 7px double #e63946; /* أحمر القلب */
+  color: #1d1d1d;
+}
+
+/* Dark Mode */
+.dark {
+  background-color: #131313;
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.2);
+  border: 7px double #f1c40f; /* أصفر/برتقالي */
+  color: #f5f5f5;
+}
+
+/*=============================================*/
+/*================ The Main BG ================*/
+/*=============================================*/
+
+.mainF1 {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    270deg,
+    #1d75bc,
+    /* الأزرق */ #e63946,
+    /* الأحمر */ #f1c40f,
+    /* البرتقالي */ #ffffff /* الأبيض */
+  );
+  background-size: 400% 400%;
+  animation: gradientAnimation 6s ease infinite alternate;
+}
+
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* ===== Designer Note ===== */
+/* ===== Designer Note ===== */ /* ===== Designer Note ===== */
+/* ===== Designer Note ===== */
+.designerNote {
+  width: 100%;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+  font-size: 14px;
+  font-weight: 500;
+  border-top: 2px solid transparent;
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+/* ===== LIGHT MODE ===== */
+.light .designerNote {
+  background: rgba(29, 117, 188, 0.2); /* خلفية فاتحة واضحة */
+  border-top: 2px solid rgba(29, 117, 188, 0.7); /* خط أزرق فاتح */
+}
+
+.light .designerNote p {
+  color: #1d75bc; /* نص أزرق داكن واضح */
+  font-weight: 600;
+}
+
+/* ===== DARK MODE ===== */
+.dark .designerNote {
+  background: #333333; /* خلفية داكنة واضحة */
+  border-top: 2px solid rgba(230, 57, 70, 0.7); /* خط أحمر داكن */
+}
+
+.dark .designerNote p {
+  color: #f1c40f; /* نص أصفر واضح */
+  font-weight: 600;
+}
+
+/* ===== أيقونات التواصل ===== */
+.theDevMedea {
+  margin-top: 12px;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* المسافة بين الروابط */
+}
+
+.theDevMedea a {
+  display: inline-block;
+  transition: transform 0.3s, filter 0.3s, box-shadow 0.3s;
+}
+
+.theDevMedea a:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+  box-shadow: 0 0 12px rgba(230, 57, 70, 0.5), 0 0 12px rgba(29, 117, 188, 0.5); /* Glow متناسق مع ألوان الموقع */
+}
+
+/* ===== أيقونات الحجم ===== */
+.theDevMedea .icon {
+  display: block;
+  width: 32px;
+  height: 32px;
+}

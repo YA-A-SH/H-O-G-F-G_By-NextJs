@@ -1,0 +1,586 @@
+/*================ MAIN BODY ======================*/
+.mainBody {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+/*================ Card containers: WIog and Waw =======================*/
+.wiog,
+.waw {
+  position: relative;
+  padding: 20px;
+  border-radius: 15px;
+  width: 500px;
+  background-color: transparent;
+  text-align: center;
+  z-index: 5555;
+  cursor: pointer;
+  transition: transform 0.5s ease;
+}
+
+.wiog:hover,
+.waw:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+/* Background gradients */
+.wiog::before,
+.waw::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(270deg, #1d75bc, #e63946, #f1c40f);
+  background-size: 400% 400%;
+  z-index: -1;
+  opacity: 0;
+  transform: translateX(100px);
+  animation-fill-mode: forwards;
+}
+
+.wiog::before {
+  animation: slideInRight 2.5s ease forwards;
+}
+
+.waw::before {
+  transform: translateX(-100px);
+  animation: slideInLeft 2.5s ease forwards;
+}
+
+/* Box shadow حسب المود */
+.darkWiog::before,
+.darkWaw::before {
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.6);
+}
+
+.lightWiog::before,
+.lightWaw::before {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* بعد التحميل - حركة مستمرة */
+.wiog.loaded::before,
+.waw.loaded::before {
+  animation: gradientMove 7s ease infinite alternate,
+    floatBg 6s ease-in-out infinite;
+  opacity: 1;
+}
+
+/* =================== Slide-in animations =================== */
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* =================== Gradient move =================== */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* =================== Floating background =================== */
+@keyframes floatBg {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px, -10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* ======================= WIog / Goal Card ======================= */
+/* ======================= WIog Text ======================= */
+.wiogTextHead {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #1d75bc, #ffffff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.5s ease;
+  text-align: center;
+  animation: gradientText 10s linear infinite alternate;
+}
+
+.wiogTextBody {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff;
+  text-align: justify;
+  padding: 0 15px;
+  transition: all 0.5s ease;
+}
+
+.light .wiogTextBody {
+  color: #131313;
+}
+
+/* ======================= Waw Text ======================= */
+.wawTextHead {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  background: linear-gradient(90deg, #1d75bc, #ffffff);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  transition: all 0.5s ease;
+  animation: gradientText 10s linear infinite alternate;
+}
+
+.wawTextBody {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ffffff;
+  text-align: justify;
+  padding: 0 15px;
+  transition: all 0.5s ease;
+}
+
+.light .wawTextBody {
+  color: #131313;
+}
+
+/* ======================= Titles Gradient Animation ======================= */
+@keyframes gradientText {
+  0% {
+    background-position: 0% center;
+    scale: 1;
+  }
+  50% {
+    background-position: 100% center;
+    scale: 1.1;
+  }
+  100% {
+    background-position: 0% center;
+    scale: 1;
+  }
+}
+
+/* ================= Hover effect ================= */
+.wiogTextHead:hover,
+.wawTextHead:hover {
+  scale: 1.1;
+  filter: brightness(1.3);
+  transition: all 0.3s ease;
+}
+
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ============================================================ */
+/* ========================================================= */
+/* ============================ TEAM CARDS  ============================ */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/*================ Cards Container =================*/
+.cardsBody {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 60px;
+}
+
+/* البطاقة الرئيسية */
+.mainCard {
+  perspective: 1200px;
+  width: 250px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.6s ease;
+}
+
+.mainCard.cardAnimate {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* البطاقة القابلة للانقلاب */
+.theCard {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.8s ease;
+  border-radius: 20px;
+  cursor: pointer;
+  border: 3px solid #1d75bc; /* أزرق */
+  box-shadow: 0 6px 18px rgba(29, 117, 188, 0.4);
+  background: linear-gradient(270deg, #1d75bc, #e63946, #f1c40f);
+  background-size: 400% 400%;
+  animation: gradientMove 6s ease infinite alternate;
+}
+
+.theCard:hover {
+  box-shadow: 0 10px 20px rgba(230, 57, 70, 0.5),
+    0 0 15px rgba(29, 117, 188, 0.4);
+  transform: scale(1.03);
+  transition: all 0.6s ease;
+}
+
+.theCard.isFlipped {
+  transform: rotateY(180deg);
+}
+
+/* الوجه الأمامي */
+.imgFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #1d75bc; /* أزرق أساسي للوجه */
+}
+
+.cardImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.imgFace:hover .cardImg {
+  transform: scale(1.1) rotate(2deg);
+}
+
+/* الوجه الخلفي */
+.textFace {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 20px;
+  transform: rotateY(180deg);
+  background: #131313;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  gap: 10px;
+  border: 2px solid #e63946; /* أحمر */
+  box-shadow: 0 8px 20px rgba(241, 196, 15, 0.3); /* برتقالي Glow */
+}
+
+/* ================= Gradient Animation ================= */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+/* ================= Text Face ================= */
+.textFace h1 {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  background: linear-gradient(90deg, #1d75bc, /* أزرق */ #e63946 /* أحمر */);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.textFace p {
+  font-size: 15px;
+  line-height: 1.5;
+  color: #ffffff;
+  transition: color 0.4s ease;
+}
+
+/* ================= Light Mode ================= */
+.light .textFace {
+  background: #fff;
+  color: #131313;
+  border: 2px solid #1d75bc; /* أزرق */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.light .textFace h1 {
+  background: linear-gradient(90deg, #1d75bc, /* أزرق */ #e63946 /* أحمر */);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.light .textFace p {
+  color: #333;
+}
+
+/* ================= Gradient Animation ================= */
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.socialIcons {
+  display: flex;
+  justify-content: center; /* توسيط الأيقونات */
+  gap: 12px; /* مسافة بينهم */
+  margin-top: 15px;
+}
+
+.socialIcons .icon {
+  width: 28px;
+  height: 28px;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.socialIcons .icon:hover {
+  transform: scale(1.2); /* تكبير عند المرور */
+  filter: brightness(1.3); /* إضاءة خفيفة عند المرور */
+}
+
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ============================================================ */
+/* ========================================================= */
+/* ============================ Our Projects  ============================ */
+/* ==================================================================== */
+/* ==================================================================== */
+/* ==================================================================== */
+
+/* ================= OUR PROJECTS ================= */
+/*================ Our Projects Container =================*/
+.OurProjPlace {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 900px;
+  margin: 100px auto 30px auto;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+  opacity: 0;
+  transition: transform 0.4s ease-out;
+}
+
+@keyframes slideUpFade {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+    opacity: 1;
+  }
+}
+
+.OurProjPlace.animateProj {
+  animation: slideUpFade 1.2s ease-out forwards;
+}
+
+/*================ Our Projects Title =================*/
+.OuProj {
+  font-size: 42px;
+  font-weight: 900;
+  background: linear-gradient(90deg, #1d75bc, #e63946, #f1c40f);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: gradientText 8s ease infinite alternate;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/*================ Project Card =================*/
+.firstProject {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 25px;
+  padding: 35px;
+  box-shadow: 0 12px 35px rgba(29, 117, 188, 0.35);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.firstProject:hover {
+  transform: scale(1.03);
+  box-shadow: 0 20px 50px rgba(230, 57, 70, 0.45);
+}
+
+/*================ Project Video =================*/
+.firstProject video {
+  width: 360px;
+  max-width: 100%;
+  border-radius: 20px;
+  border: 3px solid #1d75bc;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 25px rgba(29, 117, 188, 0.7);
+  animation: floatVideo 6s ease-in-out infinite;
+}
+
+@keyframes floatVideo {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px) scale(1.03);
+  }
+}
+
+/*================ Project Info =================*/
+.firstProjectInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; /* تغيير من flex-start إلى center */
+  gap: 20px;
+  color: #fff;
+  min-width: 300px;
+  text-align: center; /* كل النصوص بالوسط */
+}
+
+.teamImg {
+  width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5), 0 0 15px rgba(230, 57, 70, 0.4);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.teamImg:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(29, 117, 188, 0.7);
+}
+
+/*================ Project Title =================*/
+.proTitle {
+  font-size: 32px;
+  font-weight: 900;
+  color: #f1c40f;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+/*================ Project Details =================*/
+.theMainInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 1;
+}
+
+.infoRow {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center; /* جعل كل صف في الوسط */
+  align-items: center;
+}
+
+.infoLabel {
+  font-weight: 700;
+  font-size: 20px;
+  color: #1d75bc;
+}
+
+.infoValue {
+  font-size: 18px;
+  font-weight: 500;
+  color: #f1f1f1;
+  line-height: 1.4;
+}
+
+.light .infoValue {
+  color: #222;
+}
+
+/*================ Project Button =================*/
+.proVideo {
+  display: inline-block;
+  padding: 14px 26px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #1d75bc, #e63946);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  text-align: center;
+  margin-top: 15px;
+}
+
+.proVideo:hover {
+  filter: brightness(1.2);
+  transform: scale(1.05);
+}
