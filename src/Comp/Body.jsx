@@ -124,7 +124,7 @@ export default function Body({ mode }) {
                 loaded ? "loaded" : ""
               }`}
             >
-              <h2 className="wawTextHead">{t("whoAreWe", "Who Are We?")}</h2>
+              <h2 className="wawTextHead">{t("whoAreWe", "Who We Are?")}</h2>
               <p className="wawTextBody">
                 {t(
                   "whoAreWeDescription",
@@ -154,7 +154,7 @@ export default function Body({ mode }) {
         <div className="line" style={{ marginTop: "60px" }}></div>
 
         <div className={`OurProjPlace ${projAnimate ? "animateProj" : ""}`}>
-          <h2 className="OuProj">{t("ourProjects", "Our Projects")}</h2>
+          <h1 className="OuProj">{t("ourProjects", "Our Projects")}</h1>
 
           <div className="firstProject">
             <div className="firstProjectInfo">

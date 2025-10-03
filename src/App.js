@@ -1,6 +1,5 @@
 import "./Styles/body.css";
 import "./Styles/header.css";
-
 import "./Styles/footer.css";
 import "./Styles/responsev.css";
 import "./App.css"

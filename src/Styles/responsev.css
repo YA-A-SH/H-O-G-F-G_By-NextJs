@@ -36,7 +36,7 @@
   }
 
   .OuProj {
-    font-size: 38px;
+    font-size: 55px ;
     text-align: center;
   }
 
@@ -95,7 +95,7 @@
   }
 
   .htsuText {
-    font-size: 26px;
+    font-size: 42px;
   }
 
   .finishWord {
@@ -155,7 +155,7 @@
   }
 
   .OuProj {
-    font-size: 36px;
+    font-size: 50px;
     margin-bottom: 25px;
   }
 
@@ -200,7 +200,7 @@
   }
 
   .htsuText {
-    font-size: 24px;
+    font-size: 38px;
   }
 
   .finishWord {
@@ -280,7 +280,7 @@
   }
 
   .OuProj {
-    font-size: 32px;
+    font-size: 45px;
     margin-bottom: 25px;
   }
 
@@ -326,7 +326,7 @@
   }
 
   .htsuText {
-    font-size: 22px;
+    font-size: 34px;
   }
 
   .finishWord {
@@ -392,7 +392,7 @@
 
   /* تنسيقات العنوان الرئيسي */
   .OuProj {
-    font-size: 28px; /* تصغير حجم الخط */
+    font-size: 38px; /* تصغير حجم الخط */
     letter-spacing: 1px;
     margin-bottom: 20px;
   }
@@ -449,7 +449,7 @@
   }
 
   .htsuText {
-    font-size: 20px;
+    font-size: 28px;
     letter-spacing: 1px;
   }
 

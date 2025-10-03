@@ -444,7 +444,7 @@
 
 /*================ Our Projects Title =================*/
 .OuProj {
-  font-size: 42px;
+  font-size: 55px !important;
   font-weight: 900;
   background: linear-gradient(90deg, #1d75bc, #e63946, #f1c40f);
   -webkit-background-clip: text;
