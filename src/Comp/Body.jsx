@@ -217,7 +217,10 @@ export default function Body({ mode }) {
             </div>
 
             <video width="200" controls>
-              <source src="/firstProj.mp4" type="video/mp4" />
+              <source
+                src="https://res.cloudinary.com/dval7zuv6/video/upload/v1759514008/first_Proj_pmkj5b.mp4"
+                type="video/mp4"
+              />
 
               {t(
                 "videoNotSupported",
