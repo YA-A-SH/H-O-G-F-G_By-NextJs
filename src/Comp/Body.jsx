@@ -217,7 +217,7 @@ export default function Body({ mode }) {
             </div>
 
             <video width="200" controls>
-              <source src="/first Proj.mp4" type="video/mp4" />
+              <source src="/firstProj.mp4" type="video/mp4" />
 
               {t(
                 "videoNotSupported",
