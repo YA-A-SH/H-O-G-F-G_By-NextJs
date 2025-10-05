@@ -1,3 +1,35 @@
+@media screen and (min-width: 1024px) and (max-width : 1470px) {
+  .OurProjPlace {
+    width: 92%;
+    margin: 70px auto;
+    padding: 30px 20px;
+    gap: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ourProjectMainFram .left,
+  .ourProjectMainFram .right {
+    position: absolute;
+    min-width: 42px;
+    min-height: 42px;
+  }
+
+  .leftImg,
+  .rightImg {
+    width: 30px;
+    height: 30px;
+  }
+  /* تحديد مواقعهم يمين ويسار */
+  .ourProjectMainFram .left {
+    left: 0px;
+  }
+  .ourProjectMainFram .right {
+    right: 0px;
+  }
+}
+
 /* الأجهزة الكبيرة (من 650px إلى 1024px) */
 @media screen and (min-width: 650px) and (max-width: 1024px) {
   .mainBody {
@@ -27,6 +59,7 @@
     height: 170px;
   }
   .OurProjPlace {
+    width: 92%;
     margin: 70px auto;
     padding: 30px 20px;
     gap: 40px;
@@ -36,7 +69,7 @@
   }
 
   .OuProj {
-    font-size: 55px ;
+    font-size: 55px;
     text-align: center;
   }
 
@@ -106,6 +139,25 @@
   .iconForFinish {
     width: 42px;
     height: 42px;
+  }
+  .ourProjectMainFram .left,
+  .ourProjectMainFram .right {
+    position: absolute;
+    min-width: 36px;
+    min-height: 36px;
+  }
+
+  .leftImg,
+  .rightImg {
+    width: 24px;
+    height: 24px;
+  }
+  /* تحديد مواقعهم يمين ويسار */
+  .ourProjectMainFram .left {
+    left: -10px;
+  }
+  .ourProjectMainFram .right {
+    right: -10px;
   }
 }
 
@@ -210,6 +262,25 @@
     width: 40px;
     height: 40px;
     padding: 7px;
+  }
+  .ourProjectMainFram .left,
+  .ourProjectMainFram .right {
+    position: absolute;
+    min-width: 36px;
+    min-height: 36px;
+  }
+
+  .leftImg,
+  .rightImg {
+    width: 24px;
+    height: 24px;
+  }
+  /* تحديد مواقعهم يمين ويسار */
+  .ourProjectMainFram .left {
+    left: -17px;
+  }
+  .ourProjectMainFram .right {
+    right: -17px;
   }
 }
 
@@ -338,6 +409,25 @@
     height: 38px;
     padding: 6px;
   }
+  .ourProjectMainFram .left,
+  .ourProjectMainFram .right {
+    position: absolute;
+    min-width: 36px;
+    min-height: 36px;
+  }
+
+  .leftImg,
+  .rightImg {
+    width: 24px;
+    height: 24px;
+  }
+  /* تحديد مواقعهم يمين ويسار */
+  .ourProjectMainFram .left {
+    left: -17px;
+  }
+  .ourProjectMainFram .right {
+    right: -17px;
+  }
 }
 
 /* الأجهزة الأصغر (320px إلى 400px) */
@@ -392,7 +482,7 @@
 
   /* تنسيقات العنوان الرئيسي */
   .OuProj {
-    font-size: 38px; /* تصغير حجم الخط */
+    font-size: 34px !important; /* تصغير حجم الخط */
     letter-spacing: 1px;
     margin-bottom: 20px;
   }
@@ -462,5 +552,36 @@
     width: 35px;
     height: 35px;
     padding: 6px;
+  }
+  .ourProjectMainFram {
+    position: relative;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+
+  /* ========== Left / Right Buttons ========== */
+  .ourProjectMainFram .left,
+  .ourProjectMainFram .right {
+    position: absolute;
+    min-width: 30px;
+    min-height: 30px;
+  }
+
+  .leftImg,
+  .rightImg {
+    width: 20px;
+    height: 20px;
+  }
+  /* تحديد مواقعهم يمين ويسار */
+  .ourProjectMainFram .left {
+    left: -17px;
+  }
+  .ourProjectMainFram .right {
+    right: -17px;
   }
 }

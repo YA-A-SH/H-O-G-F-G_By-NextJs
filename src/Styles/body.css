@@ -584,3 +584,108 @@
   filter: brightness(1.2);
   transform: scale(1.05);
 }
+
+/* ========================================================= */
+
+/* ============================ PROJECTS SLIDER CONTROLS ============================ */
+.ourProjectMainFram {
+  position: relative;
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+/* ========== Left / Right Buttons ========== */
+.ourProjectMainFram .left,
+.ourProjectMainFram .right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  min-width: 55px;
+  min-height: 55px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #1d75bc, #e63946);
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  user-select: none;
+  box-shadow: 0 0 20px rgba(29, 117, 188, 0.5);
+  z-index: 20;
+}
+
+/* تحديد مواقعهم يمين ويسار */
+.ourProjectMainFram .left {
+  left: -70px;
+}
+.ourProjectMainFram .right {
+  right: -70px;
+}
+.leftImg,
+.rightImg {
+  width: 30px;
+  height: 30px;
+}
+.ourProjectMainFram .left:hover,
+.ourProjectMainFram .right:hover {
+  transform: scale(1.15) rotate(5deg);
+  filter: brightness(1.3);
+  box-shadow: 0 0 30px rgba(230, 57, 70, 0.6);
+}
+
+/* لون الأزرار في الوضع الفاتح */
+.light .ourProjectMainFram .left,
+.light .ourProjectMainFram .right {
+  background: linear-gradient(135deg, #1d75bc, #e63946);
+  color: #131313;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+
+/* ========== Project Counter (ex: 1 / 5) ========== */
+.projCounter {
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #f1c40f;
+  text-align: center;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(29, 117, 188, 0.6);
+  animation: fadeInCounter 0.8s ease forwards;
+}
+
+@keyframes fadeInCounter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========== Smooth Fade Animation for Project Change ========== */
+.firstProjectInfo {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeSlideIn 0.6s ease forwards;
+}
+
+@keyframes fadeSlideIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import Card from "./Card";
+import OurProjects from "./OurProjects";
 import { useTranslation } from "react-i18next";
 
 export default function Body({ mode }) {
@@ -42,36 +43,29 @@ export default function Body({ mode }) {
       img: "/hanaImg.jpg",
       about: t("hanaAbout"),
       index: 0,
-      face: "",
+
       insta: "https://www.instagram.com/hanaa_mohmmed21/",
-      tiktok: "",
     },
     {
       name: t("Obaida"),
       img: "/upidaImg.jpg",
       about: t("obaidaAbout"),
       index: 1,
-      face: "https://www.facebook.com/eng.ubidamohammed",
       insta: "https://www.instagram.com/eng.ubida.13/",
-      tiktok: "https://www.tiktok.com/@ubida97",
     },
     {
       name: t("Yaser"),
       img: "/me.jpg",
       about: t("yaserAbout"),
       index: 2,
-      face: "https://www.facebook.com/yaser.shkfa",
       insta: "https://www.instagram.com/yasershkfa/",
-      tiktok: "https://www.tiktok.com/@ya.a.s",
     },
     {
       name: t("Yahya"),
       img: "/yahya.jpg",
       about: t("yahyaAbout"),
       index: 3,
-      face: "https://www.facebook.com/profile.php?id=61581178117602",
       insta: "https://www.instagram.com/yahayaalqarinawi/",
-      tiktok: "",
     },
   ];
 
@@ -84,9 +78,7 @@ export default function Body({ mode }) {
         about={mem.about}
         animate={animate}
         index={mem.index}
-        faceLink={mem.face}
         instaLink={mem.insta}
-        tiktokLink={mem.tiktok}
       />
     );
   });
@@ -153,82 +145,7 @@ export default function Body({ mode }) {
 
         <div className="line" style={{ marginTop: "60px" }}></div>
 
-        <div className={`OurProjPlace ${projAnimate ? "animateProj" : ""}`}>
-          <h1 className="OuProj">{t("ourProjects", "Our Projects")}</h1>
-
-          <div className="firstProject">
-            <div className="firstProjectInfo">
-              <img
-                className="teamImg"
-                src="/Screenshot 2025-09-25 122241.png"
-                alt={t("teamMember", "Team Member")}
-              />
-              <h3 className="proTitle">{t("provideWater", "Provide Water")}</h3>
-
-              <div className="theMainInfo">
-                <div className="infoRow">
-                  <span className="infoLabel">{t("date", "Date:")}</span>
-                  <span className="infoValue">18/9/2025</span>
-                </div>
-                <div className="infoRow">
-                  <span className="infoLabel">
-                    {t("quantity", "Quantity:")}
-                  </span>
-                  <span className="infoValue">
-                    {t("waterQuantity", "Over 10000 Liter of WATER")}
-                  </span>
-                </div>
-                <div className="infoRow">
-                  <span className="infoLabel">{t("cost", "Cost:")}</span>
-                  <span className="infoValue">1000$</span>
-                </div>
-                <div className="infoRow">
-                  <span className="infoLabel">{t("place", "Place:")}</span>
-                  <span className="infoValue">
-                    {t("khanYouns", "Khan Youns")}
-                  </span>
-                </div>
-                <div className="infoRow">
-                  <span className="infoLabel">{t("donor", "Donor:")}</span>
-                  <span className="infoValue">
-                    {t("hogfTeam", "H-O-G-F-G Team")}
-                  </span>
-                </div>
-                <div className="infoRow">
-                  <span className="infoLabel">
-                    {t("description", "Description:")}
-                  </span>
-                  <span className="infoValue">
-                    {t(
-                      "waterDescription",
-                      "Our director decided that our first initiative would be to provide water, due to its vital importance for the people and the severe shortage of clean water. We carried it out urgently using our own funds, and although it was one of the most exhausting tasks, it was also one of the most beneficial and significant."
-                    )}
-                  </span>
-                </div>
-              </div>
-
-              <a
-                className="proVideo"
-                target="_blank"
-                href="https://www.instagram.com/reel/DPCbf9QjbXV/?igsh=b2o1ZDVucTUycmR3"
-              >
-                {t("seeFullVideo", "See The Full Video")}
-              </a>
-            </div>
-
-            <video width="200" controls>
-              <source
-                src="https://res.cloudinary.com/dval7zuv6/video/upload/v1759514008/first_Proj_pmkj5b.mp4"
-                type="video/mp4"
-              />
-
-              {t(
-                "videoNotSupported",
-                "Your browser does not support the video tag."
-              )}
-            </video>
-          </div>
-        </div>
+        <OurProjects projAnimate = {projAnimate} />
 
         <div className="line"></div>
       </div>
