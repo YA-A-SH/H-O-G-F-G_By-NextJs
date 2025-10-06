@@ -22,7 +22,7 @@ export default function OurProjects({ projAnimate }) {
       title: t("foodAid"),
       date: "2/10/2025",
       quantity: t("foodQuantity"),
-      cost: "1500$",
+      cost: "700$",
       place: t("khanYouns", "Khan Youns"),
       donor: t("hogfTeam&Roy"),
       desc: t("foodDescription"),
