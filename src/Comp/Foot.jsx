@@ -45,7 +45,11 @@ export default function Foot({ mode }) {
               className="iconForFinish"
             />
           </a>
-          <a href="#" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.instagram.com/hand_of_giving_for_gaza?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               src="/instagram.png"
               alt={t("instagram", "Instagram")}

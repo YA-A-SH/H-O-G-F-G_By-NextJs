@@ -9,30 +9,25 @@ export default function OurProjects({ projAnimate }) {
       img: "/Screenshot 2025-09-25 122241.png",
       title: t("provideWater", "Provide Water"),
       date: "18/9/2025",
-      quantity: t("waterQuantity", "Over 10000 Liter of WATER"),
+      quantity: t("waterQuantity"),
       cost: "1000$",
       place: t("khanYouns", "Khan Youns"),
       donor: t("hogfTeam", "H-O-G-F-G Team"),
-      desc: t(
-        "waterDescription",
-        "Our director decided that our first initiative would be to provide water..."
-      ),
+      desc: t("waterDescription"),
       video:
         "https://www.instagram.com/reel/DPCbf9QjbXV/?igsh=b2o1ZDVucTUycmR3",
     },
     {
       img: "/Screenshot 2025-09-25 122241.png",
-      title: t("foodAid", "Food Distribution"),
+      title: t("foodAid"),
       date: "2/10/2025",
-      quantity: t("foodQuantity", "Over 200 food packages"),
+      quantity: t("foodQuantity"),
       cost: "1500$",
-      place: t("gazaCity", "Gaza City"),
-      donor: t("hogfTeam", "H-O-G-F-G Team"),
-      desc: t(
-        "foodDescription",
-        "We distributed food packages to families in need during difficult times..."
-      ),
-      video: "https://www.instagram.com/reel/NEWPROJECT",
+      place: t("khanYouns", "Khan Youns"),
+      donor: t("hogfTeam&Roy"),
+      desc: t("foodDescription"),
+      video:
+        "https://www.instagram.com/reel/DPTuZXCDHn-/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==",
     },
   ];
 
@@ -107,7 +102,7 @@ export default function OurProjects({ projAnimate }) {
       </div>
 
       <div className="right" onClick={next}>
-      <img className="rightImg" src="/right-chevron.png" alt="right"></img>
+        <img className="rightImg" src="/right-chevron.png" alt="right"></img>
       </div>
     </div>
   );
