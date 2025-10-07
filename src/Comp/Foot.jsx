@@ -38,7 +38,11 @@ export default function Foot({ mode }) {
           )}
         </div>
         <div className="sosialMedeaIcons">
-          <a href="#" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.facebook.com/profile.php?id=61581146969788"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               src="/facebook.png"
               alt={t("facebook", "Facebook")}
