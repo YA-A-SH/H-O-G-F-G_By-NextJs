@@ -1,0 +1,313 @@
+.headMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 25px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+/*===============================================*/
+/*================ The HEAD LOGO ================*/
+/*===============================================*/
+
+.hogfgLogo {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 3px solid #fff;
+  opacity: 0;
+  transform: scale(0.95);
+  animation: fadeIn 1.2s ease forwards;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.darkimg {
+  box-shadow: 0 6px 16px rgba(255, 255, 255, 0.8);
+}
+.lightimg {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.6);
+}
+
+.hogfgLogo:hover {
+  scale: 1.16;
+  rotate: 5deg;
+  box-shadow: 0 10px 25px rgba(230, 57, 70, 0.7),
+    0 0 35px rgba(29, 117, 188, 0.6); /* Glow أحمر + أزرق */
+}
+
+/*============================================*/
+/*============= THE TEAM NAME ================*/
+/*============================================*/
+.hgf {
+  font-size: 58px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  background: linear-gradient(90deg, #1d75bc, #f1c40f);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transform: translateY(-40px);
+  animation: slideDown 1.2s ease 0.5s forwards,
+    shine 6s linear infinite alternate;
+}
+
+@keyframes slideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shine {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+.hgf:hover {
+  scale: 1.1;
+  background: linear-gradient(
+    90deg,
+    #e63946,
+    /* أحمر */ #f1c40f,
+    /* برتقالي */ #1d75bc /* أزرق */
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/*================================================*/
+/*============= THE Starting Word ================*/
+/*================================================*/
+
+.startWord {
+  font-size: 1.3rem;
+  font-weight: 300;
+  line-height: 1.6;
+  margin-top: 8px;
+  background: linear-gradient(
+    90deg,
+    #1d75bc,
+    /* الأزرق */ #e63946,
+    /* الأحمر */ #f1c40f /* البرتقالي */
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  transform: translateX(-200px) scale(0.95);
+  animation: slideIn 1.5s ease-out 1s forwards;
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+.startWord:hover {
+  transform: translateX(0) translateY(-5px);
+  filter: brightness(1.3);
+  transition: all 0.3s ease;
+}
+
+.word {
+  display: inline-block;
+  font-weight: 700;
+  color: #e63946; /* تركيز على كلمة مميزة بالأحمر */
+}
+
+/* =================================================================== */
+/* ======================== THE SETTINGS ============================ */
+/* =================================================================== */
+
+.settings {
+  position: absolute;
+  top: 70px;
+  right: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+/*==============================================*/
+/*============= THE Setting BTN ================*/
+/*==============================================*/
+
+.toggleBtn {
+  background: linear-gradient(
+    135deg,
+    #1d75bc,
+    /* الأزرق */ #e63946 /* الأحمر */
+  );
+  color: #fff;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  position: relative;
+  top: -15px;
+  right: 10px;
+  transition: all 0.4s ease;
+}
+
+.darkbtnSetting {
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.6);
+}
+.lightbtnSetting {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
+.toggleBtn:hover {
+  background: linear-gradient(
+    135deg,
+    #f1c40f,
+    /* برتقالي */ #e63946 /* أحمر */
+  );
+  transform: scale(1.15) rotate(360deg);
+}
+
+/*================================================*/
+/*============= THE Setting POPUP ================*/
+/*================================================*/
+/*==============================================*/
+/*============= THE SETTINGS POPUP =============*/
+/*==============================================*/
+
+.theSettings {
+  border-radius: 12px;
+  padding: 15px 20px;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  width: 150px;
+  font-size: 0.95rem;
+  transition: all 0.4s ease;
+}
+
+.theSettingsAnimat {
+  animation: slideIn2 0.35s ease-out forwards;
+}
+
+@keyframes slideIn2 {
+  0% {
+    opacity: 0;
+    scale: 0.85;
+  }
+  100% {
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.darkSetting {
+  background-color: rgba(0, 0, 0, 0.92);
+  color: #fbfbfb;
+  border: 2px solid #e63946; /* أحمر */
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+.lightSetting {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #222;
+  border: 2px solid #1d75bc; /* أزرق */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.theSettings button {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #1d75bc, #e63946); /* أزرق → أحمر */
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theSettings button:hover {
+  background: linear-gradient(135deg, #f1c40f, #e63946); /* برتقالي → أحمر */
+  transform: scale(1.08);
+}
+
+.theSettings.active {
+  display: flex;
+}
+
+/*===============================================*/
+/*============= THE Title IN POPUP ==============*/
+/*===============================================*/
+
+.theSettings h4 {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #e63946; /* تمييز العنوان بالأحمر */
+}
+
+/*===============================================*/
+/*============= THE BTN IN POPUP ================*/
+/*===============================================*/
+
+.editeBtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+/*==============================================*/
+/*============= THE FINISH LINE ================*/
+/*==============================================*/
+
+.line {
+  width: 95%;
+  height: 5px;
+  border-radius: 30px;
+  background: linear-gradient(270deg, #1d75bc, #f1c40f, #ffffff);
+  background-size: 400% 400%;
+  animation: lineAnimation 4s ease infinite alternate;
+}
+
+@keyframes lineAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 50% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
