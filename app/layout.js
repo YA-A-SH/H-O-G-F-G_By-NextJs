@@ -23,11 +23,13 @@ export const metadata = {
   robots: "index, follow",
 };
 
+import I18nProvider from "./Components/i18nProvider";
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        {children}
+        <I18nProvider>{children}</I18nProvider>
       </body>
     </html>
   );
